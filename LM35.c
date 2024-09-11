@@ -41,12 +41,8 @@ I2C_HandleTypeDef hi2c1;
 
 /* USER CODE BEGIN PV */
 char lcd_buffer[16];
-char lcd_buffer1[16];
-
 uint32_t adc_value = 0;
 uint16_t temperature = 0;
-
-uint32_t adc_value;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -133,8 +129,6 @@ int main(void)
 	            HD44780_Clear();
 	            HD44780_SetCursor(0, 0);
 	            HD44780_PrintStr(lcd_buffer);
-	            HD44780_SetCursor(0, 1);
-	            HD44780_PrintStr(lcd_buffer1);
 	            // Small delay before next read
 	            HAL_Delay(1000);
 
